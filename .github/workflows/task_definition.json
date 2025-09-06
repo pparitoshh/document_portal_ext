@@ -5,6 +5,13 @@
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "1024",
   "memory": "8192",
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "subnets": ["subnet-0a8eac514c2a796c0", "subnet-02432a3b47e405d59"],
+      "securityGroups": ["sg-0a075735018c0c8db"],
+      "assignPublicIp": "ENABLED"
+    }
+  },
   "containerDefinitions": [
     {
       "name": "document-portal-container",
